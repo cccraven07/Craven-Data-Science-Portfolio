@@ -1,2 +1,2 @@
 # Craven-Data-Science-Portfolio
-Code and projects for Introduction to Data Science
+This repository contains a collection of data science projects from Spring 2026. 
