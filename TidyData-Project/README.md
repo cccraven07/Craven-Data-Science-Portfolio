@@ -47,6 +47,13 @@ Open the '.ipynb' file in any python environment.
 
 ---
 
-## Visual Examples
+## Project Visuals
+
+<img width="1186" height="690" alt="image" src="https://github.com/user-attachments/assets/71f44515-b0fe-4e33-b913-fd3b5e7978dd" />
+*Figure 1: Total R&D spending by federal departments over time*
+
+
+<img width="1190" height="589" alt="image" src="https://github.com/user-attachments/assets/018a6674-5126-44e9-9022-9be0193176f8" />
+*Figure 2: Department of Defense R&D spending as a percentage of GDP over time.*
 
 
