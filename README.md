@@ -7,6 +7,9 @@ This repository contains a collection of data science projects from Spring 2026.
 
 [NBA Streamlit App](https://github.com/cccraven07/Craven-Data-Science-Portfolio/tree/main/basic_streamlit_app)
 
+**Description:**  
+In this project, I built an app in Streamlit to analyze trends in NBA player statistics over time. This app demonstrates my ability to structure and analyze datasets in Python, and is a fun data exploration tool for NBA fans.
+
 ---
 
 ## Tidy Data Project
@@ -17,7 +20,7 @@ This repository contains a collection of data science projects from Spring 2026.
 This project demonstrates principles of tidy data using federal agency R&D spending data from 1976–2017. The data in this project is reshaped so that each variable is a column, each observation is a row, and each type of observational unit forms its own table. The notebook includes exploratory data analysis, visualizations, and pivot tables to better understand trends in federal R&D spending.
 
 **Why it complements my portfolio:**  
-This project highlights my ability to structure datasets in accordance with tidy data principles, and to genderate insights from cleaned data. 
+This project highlights my ability to structure datasets in accordance with tidy data principles, and to generate insights from cleaned data. 
 
 **Why it complements my coding profile:**  
 This projects demonstrates my ability to clean and restructure datasets in python. It also demonstrates my ability to generate actionable insights from raw data, highlighting my skills in data analysis and visualization. 
