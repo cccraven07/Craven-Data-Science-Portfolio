@@ -47,15 +47,15 @@ df = None
 
 #Student exam performance dataset, which includes a number of metrics that influence student success
 if data_option == "Student Performance":
-    df = pd.read_csv("student_exam_performance_dataset.csv")
+    df = pd.read_csv("MLStreamlitApp/student_exam_performance_dataset.csv")
 
 #The classic Titanic dataset, including data about passengers on the Titanic, and whether or not they survived
 elif data_option == "Titanic":
-    df = pd.read_csv("Titanic-Dataset.csv")
+    df = pd.read_csv("MLStreamlitApp/Titanic-Dataset.csv")
 
 #The Telco Custormer Churn dataset, which includes a number of customer demographics to predict whether or not a customer is likley to leave a telecom company 
 elif data_option == "Telco Churn":
-    df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    df = pd.read_csv("MLStreamlitApp/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 #If users want to, they can upload their own data
 elif data_option == "Upload Your Own Data":
