@@ -244,19 +244,16 @@ if df is not None:
         X = df[features]
         y = df[target]
 
-        if y.dtype == "object":
-            y = y.astype("category")
-            label_mapping = dict(enumerate(y.cat.categories))
-            st.session_state["label_mapping"] = label_mapping
-            y = y.cat.codes
-
         X = pd.get_dummies(X, drop_first=True) #to convert categorical variables to numerics
         st.session_state["feature_names"] = X.columns #saving feature names so they can be displayed and interpreted
         X = X.fillna(X.mean(numeric_only=True)) #handling missing values simply by replacing with means
 
         #Encode target lables if they are categorical
         if y.dtype == "object":
-            y = y.astype("category").cat.codes
+            y = y.astype("category")
+            label_mapping = dict(enumerate(y.cat.categories))
+            st.session_state["label_mapping"] = label_mapping
+            y = y.cat.codes
 
         #Splitting data into training and testing sets, using the standard 80/20 model
         X_train, X_test, y_train, y_test = train_test_split(
