@@ -360,6 +360,11 @@ if "model" in st.session_state:
 ###
     y_test = np.array(y_test).ravel()
     preds_final = np.array(preds_final).ravel()
+
+    st.write(type(y_test), y_test.dtype)
+    st.write(type(preds_final))
+    st.write("y_test unique:", np.unique(y_test))
+    st.write("preds unique:", np.unique(preds_final))
 ###
 
     #Generating a confusion matrix based on the data to visualize model success
