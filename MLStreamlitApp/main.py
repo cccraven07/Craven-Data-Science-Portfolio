@@ -254,7 +254,6 @@ if df is not None:
             label_mapping = dict(enumerate(y.cat.categories))
             st.session_state["label_mapping"] = label_mapping
             y = y.cat.codes
-            y = y.astype(int)
 
         #Splitting data into training and testing sets, using the standard 80/20 model
         X_train, X_test, y_train, y_test = train_test_split(
