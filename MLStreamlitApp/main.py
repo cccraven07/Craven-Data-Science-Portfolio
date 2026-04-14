@@ -1,5 +1,6 @@
 import streamlit as st #To build website
 import pandas as pd #To read data
+import numpy as np
 
 #Importing sklearn ML utilities from sklean library that will be used in building and evaluating ML models later
 from sklearn.model_selection import train_test_split
@@ -307,6 +308,7 @@ if "model" in st.session_state:
 
     # Default predictions fallback (in case no probability model)
     preds_final = None
+    probs = None
 
     if hasattr(model, "predict_proba"):
 
@@ -320,6 +322,7 @@ if "model" in st.session_state:
                 0.1, 0.9, 0.5
             )
 
+            #User Explanation
             st.info(
                 "The decision threshold determines how the model converts probabilities into class predictions.\n\n"
                 "- If predicted probability ≥ threshold → classify as positive (1)\n"
@@ -332,10 +335,15 @@ if "model" in st.session_state:
             y_scores = probs[:, 1]
             preds_final = (y_scores >= threshold).astype(int)
 
+        else:
+            preds_final = np.argmax(probs, axis=1)
+
     # If model does NOT support probabilities, fallback to normal predictions
     if preds_final is None:
         preds_final = model.predict(X_test)
 
+    preds_final = np.array(preds_final).ravel
+    
     #Generating a confusion matrix based on the data to visualize model success
     cm = confusion_matrix(y_test, preds_final)
 
