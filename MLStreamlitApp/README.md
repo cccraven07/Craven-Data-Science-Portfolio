@@ -43,7 +43,7 @@ streamlit run app.py
 
 ### Deployed App
 
-👉 https://YOUR_STREAMLIT_APP_LINK_HERE
+[ML App](https://craven-data-science-portfolio-k4ia2zqbehze85v3hgbcyn.streamlit.app/)
 
 ---
 
