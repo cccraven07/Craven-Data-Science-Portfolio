@@ -342,8 +342,8 @@ if "model" in st.session_state:
     if preds_final is None:
         preds_final = model.predict(X_test)
 
-    preds_final = np.array(preds_final).ravel
-    
+    preds_final = np.array(preds_final).ravel()
+
     #Generating a confusion matrix based on the data to visualize model success
     cm = confusion_matrix(y_test, preds_final)
 
