@@ -127,10 +127,12 @@ No feature importance because the model does not learn parameters—it predicts 
 
 ## References
 
-- Scikit-learn Documentation: https://scikit-learn.org/
-- Streamlit Documentation: https://docs.streamlit.io/
-- ROC Curve and AUC concepts from course lecture notes
-- Kaggle datasets (Titanic, Telco Churn, Student Performance)
+- [Scikit-learn Documentation](https://scikit-learn.org/)
+- [Streamlit Documentation](https://docs.streamlit.io/)
+- [Titanic Dataset](https://www.kaggle.com/datasets/yasserh/titanic-dataset)
+- [Telco Customer Churn Dataset](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
+- [Student Exam Performance Dataset](https://www.kaggle.com/datasets/ssssws/student-exam-performance-dataset)
+- Serrano, Luis G. *Grokking Machine Learning*. Manning Publications, 2021.
 
 ---
 
