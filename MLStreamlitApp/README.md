@@ -1,0 +1,140 @@
+# Machine Learning Interactive Web App (Streamlit)
+
+## Project Overview
+
+This project is an interactive machine learning application built using **Streamlit** that allows users to train, evaluate, and interpret supervised learning models in real time.
+
+The goal of the app is to make machine learning more intuitive and hands-on by allowing users to:
+- Select datasets (or upload their own)
+- Choose and train different classification models
+- Tune hyperparameters interactively
+- Evaluate model performance using standard metrics
+- Interpret model behavior through visualizations
+
+This tool is designed for educational use and helps demonstrate how model choices and parameter tuning affect predictive performance.
+
+---
+
+## Instructions
+
+### Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+```
+
+2. Navigate to the project folder:
+```bash
+cd YOUR_REPO
+```
+
+3. Install required libraries:
+```bash
+pip install streamlit pandas scikit-learn matplotlib seaborn
+```
+
+4. Run the Streamlit app:
+```bash
+streamlit run app.py
+```
+
+---
+
+### Deployed App
+
+👉 https://YOUR_STREAMLIT_APP_LINK_HERE
+
+---
+
+## App Features
+
+### Dataset Selection
+Users can choose from:
+- Student Performance Dataset
+- Titanic Survival Dataset
+- Telco Customer Churn Dataset
+- Or upload their own CSV file
+
+Each dataset is used for a **binary classification task** (e.g., pass/fail, survived/did not survive, churn/no churn).
+
+---
+
+### Machine Learning Models
+
+The app supports three supervised classification models:
+
+- Logistic Regression
+  - Linear model for classification
+  - Uses a regularization parameter (C) to control model complexity
+
+- K-Nearest Neighbors (KNN)
+  - Classifies points based on the majority class of nearest neighbors
+  - Hyperparameter: number of neighbors (k)
+
+- Decision Tree Classifier
+  - Tree-based model that splits data using feature thresholds
+  - Hyperparameter: maximum tree depth
+
+---
+
+### Hyperparameter Tuning
+
+Users can interactively adjust model parameters:
+
+- Logistic Regression (C)
+  - Controls regularization strength
+  - Smaller values = simpler model (less overfitting)
+  - Larger values = more flexible model
+
+- KNN (k)
+  - Number of neighbors used for classification
+  - Small k = more sensitive to noise
+  - Large k = smoother decision boundaries
+
+- Decision Tree (max depth)
+  - Limits how deep the tree can grow
+  - Prevents overfitting when restricted
+
+A decision threshold slider is included to show how classification decisions change when adjusting probability cutoffs (default = 0.5).
+
+---
+
+## Model Evaluation Tools
+
+The app includes multiple evaluation methods:
+
+- Accuracy score (overall correctness of predictions)
+- Confusion matrix (visual breakdown of prediction errors)
+- ROC curve (model performance across all thresholds)
+- AUC score (summary of classification ability)
+- Prediction probabilities (model confidence for each class)
+
+---
+
+## Model Interpretability
+
+### Logistic Regression
+Feature coefficients show how each input affects predictions.
+
+### Decision Tree
+Feature importance scores show which variables are most influential.
+
+### KNN
+No feature importance because the model does not learn parameters—it predicts based on nearest data points.
+
+---
+
+## References
+
+- Scikit-learn Documentation: https://scikit-learn.org/
+- Streamlit Documentation: https://docs.streamlit.io/
+- ROC Curve and AUC concepts from course lecture notes
+- Kaggle datasets (Titanic, Telco Churn, Student Performance)
+
+---
+
+## Visual Examples
+
+
+
