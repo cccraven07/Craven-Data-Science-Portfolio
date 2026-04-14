@@ -1,6 +1,7 @@
 import streamlit as st #To build website
 import pandas as pd #To read data
 import numpy as np
+import os
 
 #Importing sklearn ML utilities from sklean library that will be used in building and evaluating ML models later
 from sklearn.model_selection import train_test_split
@@ -38,6 +39,8 @@ st.write(
 
 st.sidebar.header("Select Data Source") #Titling section
 
+BASE_DIR = os.path.dirname(__file__)
+
 #Selecting a data source
 data_option = st.sidebar.selectbox(
     "Choose a dataset",
@@ -46,19 +49,28 @@ data_option = st.sidebar.selectbox(
 
 df = None
 
-#Student exam performance dataset, which includes a number of metrics that influence student success
+# Student exam performance dataset
 if data_option == "Student Performance":
-    df = pd.read_csv("MLStreamlitApp/student_exam_performance_dataset.csv")
+    df = pd.read_csv(os.path.join(
+        BASE_DIR,
+        "student_exam_performance_dataset.csv"
+    ))
 
-#The classic Titanic dataset, including data about passengers on the Titanic, and whether or not they survived
+# Titanic dataset
 elif data_option == "Titanic":
-    df = pd.read_csv("MLStreamlitApp/Titanic-Dataset.csv")
+    df = pd.read_csv(os.path.join(
+        BASE_DIR,
+        "Titanic-Dataset.csv"
+    ))
 
-#The Telco Custormer Churn dataset, which includes a number of customer demographics to predict whether or not a customer is likley to leave a telecom company 
+# Telco churn dataset
 elif data_option == "Telco Churn":
-    df = pd.read_csv("MLStreamlitApp/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    df = pd.read_csv(os.path.join(
+        BASE_DIR,
+        "WA_Fn-UseC_-Telco-Customer-Churn.csv"
+    ))
 
-#If users want to, they can upload their own data
+# User upload option (already correct)
 elif data_option == "Upload Your Own Data":
     uploaded_file = st.sidebar.file_uploader("Upload CSV file", type=["csv"])
     if uploaded_file is not None:
@@ -231,6 +243,12 @@ if df is not None:
         #Split data into feature and testing variables
         X = df[features]
         y = df[target]
+
+        if y.dtype == "object":
+            y = y.astype("category")
+            label_mapping = dict(enumerate(y.cat.categories))
+            st.session_state["label_mapping"] = label_mapping
+            y = y.cat.codes
 
         X = pd.get_dummies(X, drop_first=True) #to convert categorical variables to numerics
         st.session_state["feature_names"] = X.columns #saving feature names so they can be displayed and interpreted
