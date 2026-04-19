@@ -23,7 +23,7 @@ This project demonstrates principles of tidy data using federal agency R&D spend
 This project highlights my ability to structure datasets in accordance with tidy data principles, and to generate insights from cleaned data. 
 
 **Why it complements my coding profile:**  
-This projects demonstrates my ability to clean and restructure datasets in python. It also demonstrates my ability to generate actionable insights from raw data, highlighting my skills in data analysis and visualization. 
+This projects demonstrates my ability to clean and restructure datasets in python. It also demonstrates my ability to generate actionable insights from raw data, highlighting my skills in data analysis and visualization. In this project, I used pandas for data wrangling, and both seaborn and matplotlib for creating visualizations. Through these tools, I transformed raw data into actionable insights that communicate clear outcomes. 
 
 ## Machine Learning App
 
