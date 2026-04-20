@@ -51,7 +51,14 @@ Once the app is launched in your browser, you can:
 
 [NBA Player Statistics Dataset on Kaggle](https://www.kaggle.com/datasets/justinas/nba-players-data)
  
-
 ---
 
+## Project Visuals
+
+<img width="924" height="501" alt="image" src="https://github.com/user-attachments/assets/d1c26c7c-d06b-48a6-a4fa-a9a0903ca548" />
+*Figure 1: Percentage of players born in the US over time*
+
+
+<img width="904" height="446" alt="image" src="https://github.com/user-attachments/assets/2767d326-c749-4023-afc2-da4176c6d286" />
+*Figure 2: Graph comparing the Golden State Warriors' True Shooting Percentage to league average over time*
 
