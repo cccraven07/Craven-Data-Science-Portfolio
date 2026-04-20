@@ -17,7 +17,8 @@ Applying these principles makes data easier to analyze, and interpret, and revea
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/cccraven07/Craven-Data-Science-Portfolio.git```
+git clone https://github.com/cccraven07/Craven-Data-Science-Portfolio.git
+```
 ### 2. Go to the the Project Directory
 
 ```bash
